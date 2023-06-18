@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/appContext'
-import { Badge, Box, Card, Center, CircularProgress, Heading, Image, Skeleton, Stack, Switch, Text, Wrap } from '@chakra-ui/react';
+import { Box, Card, Center, CircularProgress, Wrap } from '@chakra-ui/react';
 import SingleWeatherForecast from './SingleWeatherForecast';
 import TemperatureGraphView from './TemperatureGraphView';
 
 
 function WeatherForecast() {
 
-    const { getWeatherForecastbyname, cityName, isCelsius, getInFer, getInCelsius, errorMsg } = useAppContext()
+    const { getWeatherForecastbyname, cityName, errorMsg } = useAppContext()
 
     const [forecast, setForecast] = useState({
         isLoading: true

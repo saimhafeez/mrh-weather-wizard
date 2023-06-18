@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/appContext'
-import { Badge, Box, Card, Center, CircularProgress, Heading, Image, Skeleton, Stack, Switch, Text } from '@chakra-ui/react';
-import ReactCountryFlag from 'react-country-flag';
+import { Badge, Box, Card, Center, CircularProgress, Heading, Image, Stack, Switch, Text } from '@chakra-ui/react';
 
 import humidityIcon from '../assets/images/humidity.png'
 import pressureIcon from '../assets/images/pressure.png'
@@ -12,7 +11,7 @@ import WeatherStatusList from '../utils/WeatherStatusList';
 
 function WeatherComponent() {
 
-    const { cityName, getWeatherbyname, isCelsius, updateIsCelsius, getInFer, getInCelsius, updateCityName, errorMsg } = useAppContext();
+    const { cityName, getWeatherbyname, isCelsius, updateIsCelsius, getInFer, getInCelsius, errorMsg } = useAppContext();
 
     const [weatherInfo, setWeatherInfo] = useState({
         isLoading: true,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, Box, Card, Center, CircularProgress, Heading, Image, Skeleton, Stack, Switch, Text, Wrap } from '@chakra-ui/react';
+import { Card, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import WeatherStatusList from '../utils/WeatherStatusList';
 import WeatherMain from './WeatherMain';
 

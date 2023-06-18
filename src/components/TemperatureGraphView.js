@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Badge, Box, Card, Center, CircularProgress, Heading, Image, Skeleton, Stack, Switch, Text, Wrap } from '@chakra-ui/react';
+import { Box, Card, Center, CircularProgress, Stack } from '@chakra-ui/react';
 import { useAppContext } from '../context/appContext';
 
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 
 function TemperatureGraphView() {

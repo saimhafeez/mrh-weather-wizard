@@ -1,18 +1,17 @@
-import { Box, Button, ButtonGroup, Card, Divider, Input, Select, Stack, Text, Wrap, chakra, keyframes } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
-import React, { useEffect, useRef, useState } from 'react'
+import { Box, Button, Card, Input, Stack, Text } from '@chakra-ui/react'
+import React, { useState } from 'react'
 
 import { MdGpsFixed } from 'react-icons/md'
 import { useAppContext } from '../context/appContext';
 
-import { Country, State, City } from 'country-state-city';
+import { City } from 'country-state-city';
 
 
 
 function SearchBar() {
 
     const [searchName, setSearchName] = useState('');
-    const { cityName, updateCityName, updateErrorMsg, errorMsg, setCityNameByCoordinates } = useAppContext();
+    const { updateCityName, updateErrorMsg, errorMsg, setCityNameByCoordinates } = useAppContext();
 
     const [isInputFocused, setIsInputFocused] = useState(false);
 
@@ -48,8 +47,6 @@ function SearchBar() {
                     <Input
                         type='text'
                         placeholder='Enter City'
-                        // ref={inputRef}
-                        // className={isInputFocused ? 'focused' : ''}
                         variant='unstyled'
                         p={2}
                         border='none'
@@ -106,7 +103,5 @@ function SearchBar() {
         </Stack>
     )
 }
-
-const searchTypes = ['Name', 'Location']
 
 export default SearchBar
